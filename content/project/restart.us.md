@@ -1,6 +1,7 @@
 ---
 title: Restart US
-date: "2023-10-24T13:50:46+02:00"
+#date: "2023-10-24T13:50:46+02:00"
+weight: 4
 banner: "img/solution/restart.us.png"
 banner-gen: >
   {

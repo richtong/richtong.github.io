@@ -1,8 +1,10 @@
 weight: 1
-name: "Consulting"
+name: Free Useful Tools
 # icon: "fas fa-desktop"
-icon: "fa-solid fa-handshake"
-url: ""
+# icon: "fa-solid fa-handshake"
+icon: fa-solid fa-screwdriver-wrench
+url: https://github.com/richtong
 description: >
-  We work directly with senior and executive managementon their challenges. We take board seats and an active role as needed.
-  With our global experience, we have the right 1-1 expertise to work with your teams anywhere in the world.
+  Over the last ten years, I've accumulated all kinds of tools and things and we are making this available to the world.
+  There are two major ones, [Bin](/bin) and [Lib](/lib) which has all the library functions. We use this as a form
+  of documentation. Everytime something gets installed, it is documented in an installation script.

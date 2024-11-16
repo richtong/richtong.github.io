@@ -1,9 +1,10 @@
 weight: 2
-name: "World Class Research"
+name: Useful Tips, Tricks and Traps
 # icon: "fas fa-print"
-icon: fa-solid fa-book-open-reader
-url: ""
+# icon: fa-solid fa-book-open-reader
+icon: fa-solid fa-comments
+url: https://tongfamily.com
 description: >
-  If you have a complex problem that needs more work. We work with you  to design a research and analysis program to help you
-  quickly find the right solution. This can involve academic, business and government sources, we look everywhere so you get
-  the very best solution.
+  We have a blog that's nearly 30 years old with over 6,000 posts that probably has the random fact that you need.
+  If you have any questions or are wondering about technology just drop us a note at [Tongfamily.com](mailto:info@tongfamily.com)
+  or find us on [Mastodon](https://mastodon.social/@richtong) and I'm happy to add to the collective.
