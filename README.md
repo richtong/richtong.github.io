@@ -14,6 +14,13 @@ This will generate an automatic action to publish at "$ORG.github.io" which is
 pretty cool. But unless you pay you can't do this with GitHub Free, you need to
 upgrade to at least GitHubPro for $48/year.
 
+## Using Hugo with Github Pages
+
+This is a little tricky, first install the .nojekyll file, then in the Build and
+Deployment section source pick GitHub Actions and browse all workflows. You will
+find a Hugo action so select it. This adds an action on the main branch of the
+github.io repo you just made and makes a hugo site. Pretty neat.
+
 ## The vanity stuff with $ORG/$ORG
 
 There is another vanity repo which let's you post cool things in your profile
