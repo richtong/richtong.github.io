@@ -1,0 +1,27 @@
+<!-- Adding a second background -->
+{{ if isset .Site.Params "mission" }} {{ if .Site.Params.mission.enable }}
+<section class="bar background-image-fixed-3 no-mb color-white text-center">
+  <div class="dark-mask"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="icon icon-lg">
+          <i class="{{ .Site.Params.mission.icon }}"></i>
+        </div>
+        <h3 class="text-uppercase">
+          {{ .Site.Params.mission.title | markdownify }}
+        </h3>
+        <p class="lead">{{ .Site.Params.mission.subtitle | markdownify }}</p>
+        <p class="text-center">
+          {{ with .Site.Params.mission.link_url }}
+          <a href="{{ . }}" class="btn btn-template-transparent-black btn-lg">
+            {{ end }} {{ with .Site.Params.mission.link_text }} {{ . |
+            markdownify }} {{ end }} {{ with .Site.Params.mission.link_url }}
+          </a>
+          {{ end }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }} {{ end }}

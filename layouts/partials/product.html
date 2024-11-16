@@ -1,0 +1,64 @@
+{{ if isset .Site.Params "product" }} {{ if .Site.Params.product.enable }}
+<!-- <section class="bar background-image-fixed-2 no-mb color-white text-center"> -->
+<section class="bar background-image-fixed-1 no-mb color-white text-center">
+  <div class="dark-mask"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="icon icon-lg">
+          <i class="{{ .Site.Params.product.icon }}"></i>
+        </div>
+        <h3 class="text-uppercase">
+          {{ .Site.Params.product.title | markdownify }}
+        </h3>
+        <p class="lead">{{ .Site.Params.product.subtitle | markdownify }}</p>
+        <p class="text-center">
+          {{ with .Site.Params.product.link_url }}
+          <a href="{{ . }}" class="btn btn-template-transparent-black btn-lg">
+            {{ end }} {{ with .Site.Params.product.link_text }} {{ . |
+            markdownify }} {{ end }} {{ with .Site.Params.product.link_url }}
+          </a>
+          {{ end }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ if isset .Site.Data "product" }} {{ if gt (len .Site.Data.product) 0 }}
+<section class="bar background-white">
+  <div class="container">
+    {{ $elements := default 3 .Site.Params.product.cols }} {{ $product := sort
+    .Site.Data.product "weight" }} {{ $total_rows := div (len $product)
+    $elements }} {{ if gt (mod (len $product) $elements) 0 }} {{ $total_rows =
+    add $total_rows 1 }} {{ end }} {{ range $i, $sequence := seq $total_rows }}
+    <div
+      class="row row-{{ $i }} row-{{ if eq (mod $i 2) 0 }}odd{{ else }}even{{ end }}"
+    >
+      {{ range $j, $sequence2 := (seq $elements) }} {{ $feature_index := add
+      (mul $i $elements) $j }} {{ if lt $feature_index (len $product) }} {{
+      $element := index $product $feature_index }}
+
+      <div
+        class="col-md-{{ div 12 $elements }} col-{{ $j }} col-{{ if eq (mod $j 2) 0 }}odd{{ else }}even{{ end }}"
+      >
+        <div class="box-simple">
+          {{ with $element.url }}
+          <a href="{{ $element.url }}">
+            {{ end }}
+            <div class="icon">
+              <i class="{{ $element.icon }}"></i>
+            </div>
+            {{ with $element.url }}
+          </a>
+          {{ end }}
+          <h3>{{ $element.name | markdownify }}</h3>
+          <p>{{ $element.description | markdownify }}</p>
+        </div>
+      </div>
+      {{ end }} {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }} {{ end }} {{ end }} {{ end }}

@@ -1,0 +1,475 @@
+baseurl: /
+title: Forgepoint Partners
+#if you are using submodules
+# theme:
+#   - hugo-universal-theme
+# only need themeDir for exampleSite
+# themesDir: ../..
+languageCode: en-us
+defaultContentLanguage: en
+# number of words in a blog summary
+summaryLength: 100
+# does not appear to work
+# changed https://gohugo.io/templates/pagination/
+# paginate: 10
+pagination:
+  paperSize: 10
+pluralizelisttitles: false
+services:
+  # disqus:
+  #   Shortname: forgepoint
+  googleAnalytics:
+    id: ""
+module:
+  imports:
+    # using our fork
+    - path: github.com/richtong/hugo-universal-theme
+    # hugoify base
+    # - path: github.com/hugolify/hugolify-sveltia-cms
+# https://gohugo.io/render-hooks/tables/
+# tables rendered like # renders according to
+# https://github.github.com/gfm/#tables-extension-
+# https://gohugo.io/content-management/markdown-attributes/
+# provides more attributes to rendering of HTML with go
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+        title: true
+menu:
+  main:
+    - name: Home
+      identifier: menu.home
+      url: /
+      weight: 1
+    # - name: "The Business Problem"
+    #   url: problem/
+    #   weight: 1
+    #   parent: menu.home
+    # - name: "The Technical Solution"
+    #   url: solution/
+    #   weight: 2
+    #   parent: menu.home
+    # - name: "Why Now?"
+    #   url: whynow/
+    #   weight: 3
+    #   parent: menu.home
+    # - name: "Solution in Action"
+    #   url: solutions/
+    #   weight: 4
+    #   parent: menu.home
+    # - name: "How to Get Started"
+    #   url: start/
+    #   weight: 5
+    #   parent: menu.home
+    # - name: Programs
+    #   identifier: menu.program
+    #   url: /program
+    #   weight: 2
+    # - name: Applications
+    #   identifier: menu.app
+    #   # url: /img/tne-ai-studio-on-laptop.png
+    #   url: /app
+    #   weight: 2
+    # - name: Total Neural Engine
+    #   identifier: section.engine
+    #   url: product/engine/
+    #   weight: 1
+    #   parent: menu.products
+    #   post: 1
+    # - name: TNE Studio
+    #   identifier: section.studio
+    #   url: product/studio/
+    #   weight: 2
+    #   parent: menu.products
+    #   post: 2
+    # - name: Expert Agent Library
+    #   url: product/library/
+    #   weight: 1
+    #   parent: section.engine
+    # - name: Distributed High-Scale Kernel
+    #   url: product/kernel/
+    #   weight: 2
+    #   parent: section.engine
+    # - name: Anti-Hallucination
+    #   url: product/hallucination/
+    #   weight: 3
+    #   parent: section.engine
+    # - name: Neural User Interface
+    #   url: product/ui/
+    #   weight: 4
+    #   parent: section.engine
+    # - name: Multimodal
+    #   url: product/multimodal/
+    #   weight: 5
+    #   parent: section.engine
+    # - name: Open Models
+    #   url: product/models/
+    #   weight: 6
+    #   parent: section.engine
+    # - name: Write in English
+    #   url: product/write/
+    #   weight: 1
+    #   parent: section.studio
+    # - name: Visual Workflow
+    #   url: product/studio/workflow
+    #   weight: 2
+    #   parent: section.studio
+    # - name: Visual Debugging
+    #   url: product/studio/debug/
+    #   weight: 3
+    #   parent: section.studio
+    # - name: Unlimited Undo
+    #   url: product/studio/undo/
+    #   weight: 4
+    #   parent: section.studio
+    # - name: Multi-user Collaboration
+    #   url: product/studio/collab/
+    #   weight: 5
+    #   parent: section.studio
+    - name: Partners
+      identifier: menu.solution
+      # url: /img/template-homepage.png
+      url: /solution
+      weight: 4
+    # - name: Supply Chain
+    #   identifier: section.supply
+    #   url: partner/supply-chain/
+    #   weight: 1
+    #   parent: menu.partners
+    #   post: 1
+    # - name: Current Inventory Optimization
+    #   url: partner/inv/
+    #   weight: 1
+    #   parent: section.supply
+    # - name: New Product Introduction
+    #   url: partner/npi/
+    #   weight: 2
+    #   parent: section.supply
+    # - name: Procurement and Order Optimization
+    #   url: partner/order/
+    #   weight: 3
+    #   parent: section.supply
+    # - name: Corporate and Government
+    #   identifier: section.project
+    #   url: partner/corp
+    #   weight: 2
+    #   parent: menu.partners
+    #   post: 1
+    # - name: Project Proposals
+    #   url: partner/project/
+    #   weight: 1
+    #   parent: section.project
+    # - name: Security and Operations
+    #   url: partner/sec/
+    #   weight: 2
+    #   parent: section.project
+    # - name: Compliance
+    #   url: partner/compliance/
+    #   weight: 3
+    #   parent: section.project
+    # - name: Marketing and Brand
+    #   identifier: section.marketing
+    #   url: partner/mktg/
+    #   weight: 2
+    #   parent: menu.partners
+    #   post: 2
+    # - name: Digital Asset Management
+    #   url: partner/dam/
+    # weight: 1
+    # parent: section.marketing
+    # - name: Visual gCustomer Preferences
+    #   url: partner/pref/
+    #   weight: 2
+    #   parent: section.marketing
+    # - name: Advertising Effectiveness
+    #   url: partner/ad/
+    #   weight: 3
+    #   parent: section.marketing
+    # post: 3
+    # - name: Sustainability
+    #   identifier: section.sustain
+    #   url: partner/sustain
+    #   weight: 3
+    #   parent: menu.partners
+    #   post: 2
+    # - name: Reporting (EU CSRD)
+    #   url: partner/sustain/report/
+    #   weight: 1
+    #   parent: section.sustain
+    # - name: Compliance
+    #   url: partner/sustain/compliance/
+    #   weight: 2
+    #   parent: section.sustain
+    # - name: Sourcing Management
+    #   url: partner/sustain/sourcing/
+    #   weight: 3
+    #   parent: section.sustain
+    # - name: Technology
+    #   identifier: menu.
+    #   # url: /img/template-homepage.png
+    #   # url: /img/tne-ai-studio-on-laptop.png
+    #   url: /tech
+    #   weight: 3
+    # - name: "Run on Your PC"
+    #   url: adv/local
+    #   weight: 1
+    #   parent: menu.advantage
+    #   post: 1
+    # - name: "Run on Your Server"
+    #   url: adv/local
+    #   weight: 1
+    #   parent: menu.advantage
+    #   post: 2
+    # - name: "Small Agents"
+    #   url: adv/local
+    #   weight: 1
+    #   parent: menu.advantage
+    #   post: 3
+    # - name: "Version Control"
+    #   url: adv/version
+    #   weight: 2
+    #   parent: menu.advantage
+    #   post: 4
+    # - name: Insights
+    #   identifier: menu.insights
+    #   url: /blog/
+    #   weight: 5
+    # - name: FAQ
+    #   identifier: menu.faq
+    #   url: /faq/
+    #   weight: 6
+    - name: About
+      identifier: menu.about
+      url: /about
+      weight: 7
+    # - name: The Big Picture
+    #   identifier: section.mission
+    #   url: ""
+    #   weight: 1
+    #   parent: menu.about
+    #   post: 1
+    # - name: Mission
+    #   url: ""
+    #   weight: 2
+    #   parent: section.mission
+    # - name: Culture
+    #   url: ""
+    #   weight: 3
+    #   parent: section.mission
+    # - name: Values
+    #   url: ""
+    #   weight: 4
+    #   parent: section.mission
+    # - name: The Team
+    #   identifier: section.team
+    #   url: ""
+    #   weight: 1
+    #   parent: menu.about
+    #   post: 2
+    # - name: Co-founders
+    #   url: ""
+    #   weight: 1
+    #   parent: section.team
+    # - name: Advisors
+    #   url: ""
+    #   weight: 2
+    #   parent: section.team
+    # - name: Team Members
+    #   url: ""
+    #   weight: 3
+    #   parent: section.team
+    # - identifier: contact
+    #   name: Contact
+    #   url: /contact/
+    #   weight: 8
+  topbar:
+    - weight: 1
+      name: Phone
+      url: tel:+1-209-432-9029
+      pre: <i class='fas fa-2x fa-phone'></i>
+    - weight: 2
+      name: GitHub
+      url: https://github.com/forgepointpartners
+      pre: <i class='fab fa-2x fa-github'></i>
+    # - weight: 3
+    #   name: Facebook
+    #   url: http://facebook.com
+    #   pre: <i class='fab fa-2x fa-facebook'></i>
+    # - weight: 4
+    #   name: Mastodon
+    #   url: http://mastodon.ai
+    #   pre: <i class='fab fa-2x fa-twitter'></i>
+    - weight: 5
+      name: Email
+      # kept in iCloud/icloudplus routing to trang
+      url: mailto:info@forgepointpartners.com
+      pre: <i class='fas fa-2x fa-envelope'></i>
+params:
+  viewMorePostLink: /blog/
+  author: Forgepoint Partners
+  defaultKeywords:
+    - education
+    - consulting
+  # this mainSections is used in layouts?_default/list.html to filter
+  mainSections:
+    - blog
+  defaultDescription: Forgepoint Partners works with the very best Supply Chain, Education and Non-Profit organizations
+  facebook_site: ""
+  twitter_site: ""
+  default_sharing_image: img/sharing-default.png
+  enableGoogleMaps: false
+  googleMapsApiKey: AIzaSyAv7Sza8NSp9_l_g8G2vlo0H4ydEPn_2jY
+  # Google maps, right click on location to get lat long
+  latitude: "47.63500905607598"
+  longitude: "-122.27901488650664"
+  style: pink
+  formspree_action: https://formspree.io/sample/of/endpoint
+  contact_form_ajax: false
+  enableRecaptchaInContactForm: false
+  googleRecaptchaKey: site_key_for_google_recaptcha
+  about_us: <p>Forgepoint Partners works with the very best Supply Chain, Education and Non-Profit organizations.</p>
+  copyright: Copyright (c) 2009 - 2024, Forgepoint Partners, LLC, All Rights Reserved.
+  date_format: 2 January 2006
+  dropdown_mouse_over: false
+  # use text
+  disabled_logo: true
+  logo_text: Forgepoint Partners
+  logo: img/logo.png
+  logo_small: img/logo.small.png
+  contact_url: /contact
+  address: "<p class=\"text-uppercase\"><strong>Forgepoint Partners</strong>
+
+    \        <br>
+
+    \        <br>4111 E Madison St
+
+    \        <br>Ste 2 PMB 361
+
+    \        <br>Seattle, WA 98112
+
+    \        <br>
+
+    \        <strong>United States of America</strong>
+
+    \      </p>
+
+    \      "
+  topbar:
+    enable: true
+    text: "<p class=\"hidden-sm hidden-xs\">Contact us at +1 (209) 432-9029 or
+      info@forgepointpartners.com.</p>
+
+      \      <p class=\"hidden-md hidden-lg\"><a href=\"tel:+1 (209) 432-
+      9029\" data-animate-hover=\"pulse\"><i class=\"fas fa-phone\"></i></a>
+
+      \      <a href=\"mailto:info@forgepointpartners.com\"
+      data-animate-hover=\"pulse\"><i class=\"fas fa-envelope\"></i></a>
+
+      \      </p>
+
+      \      "
+  # what appears on the right side in a blog listing
+  widgets:
+    categories: true
+    tags: true
+    search: true
+  carouselHomepage:
+    enable: true
+    auto_play: true
+    slide_speed: 90000
+    pagination_speed: 2000
+  mission:
+    enable: true
+    # icon: far fa-file-alt
+    icon: fas fa-plane-departure
+    title: >
+      Our Mission: Make the World a Better Place
+    subtitle: >
+      Forgepoint Partners works with the very best Supply Chain, Education and Civic organziations to make
+      the world a better place. We have decades long experience working with complex supply problems in our
+      ever changing world. We have worked with world-class education and civic organizationst to bring them
+      the best business know-how and processes to solve their unique problems.
+    # link_url: /about
+    # link_text: More About Us...
+  features:
+    enable: true
+    cols: 3
+  product:
+    enable: true
+    icon: far fa-file-alt
+    title: Our Orion&trade; Application Saves Hours of Time and Gets Your Point Across Better Than Ever
+    subtitle: >
+      Our first product, Orion, finds and filters information from your data silos and
+      the Internet with just a quick question from you, then analyzes and processes it
+      with a set of business rules written in plain English, and produces in seconds
+      easy to understand recommendations that go directly into Outlook, PowerPoint
+      slides, Word and Excel spreadsheets.
+    link_url: /app
+    link_text: Learn More
+    cols: 3
+  # we will add solutions later
+  see_more:
+    enable: true
+    icon: far fa-file-alt
+    title: Our Track Record
+    subtitle: >
+      Learn more about some of the solutions we've found for customers and get an idea of how we
+      can help you today.
+    link_url: /solution
+    link_text: See More
+  carouselExperience:
+    items: 6
+    auto_play: false
+    slide_speed: 2000
+    pagination_speed: 1000
+  experience:
+    enable: true
+    title: Our Experience
+    subtitle: >
+      We’ve worked at some of the largest changemakers in the world and are here to
+      serve you. Our experience spans 40 yeas of technology transformation, starting
+      with the Personal Computer in the 1980s to the Internet revolution, to the
+      mobile revolution and then the Cloud revolution.  These disruptive moments in
+      technology have served us well to understand your needs in the AI Revolution.
+  carouselCustomers:
+    items: 6
+    auto_play: false
+    slide_speed: 2000
+    pagination_speed: 1000
+  clients:
+    enable: false
+    title: Our Client and Partners
+    subtitle: >
+      We've been privileged to work with some of the best people in the world to
+      bring the fruits of AI revolution to their organizations
+  carouselTestimonials:
+    items: 4
+    auto_play: false
+    slide_speed: 2000
+    pagination_speed: 1000
+  testimonials:
+    enable: false
+    title: Experience
+    subtitle: >
+      We worked for over 35 years in Enterprise solutions and have helped hundreds of customers
+      adopt successfully major new technology innovations from the PC to mobile to cloud and
+      now to AI.
+    link_text: Learn More
+  recent_posts:
+    enable: false
+    title: Latest Insights
+    subtitle: >
+      We scour the research community and the latest innovations in the AI
+      landscape and bring you the latest analysis to help you grow your business.
+    hide_summary: false
+  footer:
+    recent_posts:
+      enable: true
+permalinks:
+  blog: /blog/:year/:month/:day/:filename/
+taxonomies:
+  category: categories
+  tag: tags
+  author: authors

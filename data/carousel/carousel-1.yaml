@@ -1,0 +1,25 @@
+weight: 1
+title: The World is Complex
+description: >
+  <p>What was simple world has gotten so complicated, from global events to weather problems to local issues<p>
+
+image: img/carousel/forgepoint-complex-world.png
+
+gen: >
+  {
+    "prompt": "complex world",
+    "is_adv_mode": false,
+    "selected_sd_model": "FLUX.1-dev",
+    "selected_aspect_ratio": "Landscape",
+    "num_imgs": 1,
+    "selected_sd_style": "enhance",
+    "applet_name": "txt2img",
+    "available_text_emb_words": {},
+    "img_width": 896,
+    "img_height": 704,
+    "num_steps": 25,
+    "pipeline": "flux",
+    "flux_model_type": "dev",
+    "image_no": 0,
+    "seed": 167886
+  }

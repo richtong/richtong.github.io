@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    {{ partial "headers.html" . }}
+{{ partial "custom_headers.html" . }}
+  </head>
+
+  <body>
+    {{ if eq hugo.Environment "development" }}
+    <p>./richt/layouts/index.html</p>
+    {{ end }}
+    <div id="all">
+      {{ partial "top.html" . }}
+      {{ partial "nav.html" . }}
+      {{ partial "carousel.html" . }}
+      {{ partial "mission.html" . }}
+      {{ partial "features.html" . }}
+      {{/*
+        {{ partial "product.html" . }}
+        {{ partial "testimonials.html" . }}
+        {{ partial "clients.html" . }}
+      */}}
+      {{ partial "see_more.html" . }}
+      {{ partial "experience.html" . }}
+      {{ partial "recent_posts.html" . }}
+      {{ partial "footer.html" . }}
+    </div>
+    <!-- /#all -->
+
+    {{ partial "scripts.html" . }}
+  </body>
+</html>

@@ -1,0 +1,23 @@
+weight: 4
+title: Easy to work with
+description: >
+  <p>We know how to work in organizations. From multinationals to the smalled non-profits.</p>
+image: img/carousel/forgepoint-good-meeting.png
+gen: >
+  {
+      "prompt": "many happy business meeting people \n",
+      "is_adv_mode": false,
+      "selected_sd_model": "FLUX.1-dev",
+      "selected_aspect_ratio": "Landscape",
+      "num_imgs": 1,
+      "selected_sd_style": "enhance",
+      "applet_name": "txt2img",
+      "available_text_emb_words": {},
+      "img_width": 896,
+      "img_height": 704,
+      "num_steps": 25,
+      "pipeline": "flux",
+      "flux_model_type": "dev",
+      "image_no": 0,
+      "seed": 336522
+  }
