@@ -1,5 +1,7 @@
 {{ if isset .Site.Params "see_more" }} {{ if .Site.Params.see_more.enable }}
-<section class="bar background-image-fixed-2 no-mb color-white text-center">
+<section
+  class="bar background-image-track-record no-mb color-white text-center"
+>
   <div class="dark-mask"></div>
   <div class="container">
     <div class="row">
@@ -14,11 +16,8 @@
         <p class="text-center">
           {{ with .Site.Params.see_more.link_url }}
           <a href="{{ . }}" class="btn btn-template-transparent-black btn-lg">
-            {{ end }}
-            {{ with .Site.Params.see_more.link_text }}
-            {{ . | markdownify }}
-            {{ end }}
-            {{ with .Site.Params.see_more.link_url }}
+            {{ end }} {{ with .Site.Params.see_more.link_text }} {{ . |
+            markdownify }} {{ end }} {{ with .Site.Params.see_more.link_url }}
           </a>
           {{ end }}
         </p>

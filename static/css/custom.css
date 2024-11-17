@@ -2,15 +2,56 @@
 /* Example site test */
 
 .box-image-text .image {
-    min-height: 190px;
-    max-height: 190px;
+  min-height: 190px;
+  max-height: 190px;
 }
 
 .box-image-text .image img {
-    max-height: 190px;
-    margin: auto;
+  max-height: 190px;
+  margin: auto;
 }
 
 .box-simple {
-    min-height: 230px;
+  min-height: 230px;
+}
+
+/* used by mission but is missing from standard
+{
+    "prompt": "happy people celebration apartment residents",
+    "is_adv_mode": false,
+    "selected_sd_model": "FLUX.1-dev",
+    "selected_aspect_ratio": "Landscape",
+    "num_imgs": 1,
+    "selected_sd_style": "enhance",
+    "applet_name": "txt2img",
+    "available_text_emb_words": {},
+    "img_width": 896,
+    "img_height": 704,
+    "num_steps": 25,
+    "pipeline": "flux",
+    "flux_model_type": "dev",
+    "image_no": 0,
+    "seed": 126697
+}
+*/
+.bar.background-image-happy-couple {
+  background: url("../img/fixed-background-happy-couple.jpg") center top
+    no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* adding new background images */
+.bar.background-image-fixed-3 {
+  background: url("../img/fixed-background-3.jpg") center top no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* used by mission but is missing from standard */
+.bar.background-image-track-record {
+  background: url("../img/fixed-background-track-record.jpg") center top
+    no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
